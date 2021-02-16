@@ -1,29 +1,25 @@
 const date = require("date-and-time");
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license ="MIT") {
+  if (license =="MIT") {
     licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   }
-  else if (license ="The Unlicense") {
+  else if (license =="The Unlicense") {
     licenseBadge = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
   }
   else {
-    licenseBadge = ''
+    licenseBadge = '';
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  console.log(licenseBadge);
-}
 
-// TODO: Create a function that returns the license section of README
+
+
 // If there is no license, return an empty string
 function renderLicenseSection(license, user) {
-  if(license = "MIT"){
+  if(license == "MIT"){
     const now = new Date();
     currentYear = date.format(now, "YYYY");
     licenseText =`Copyright ${currentYear} ${user}
@@ -31,7 +27,7 @@ function renderLicenseSection(license, user) {
     The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`;
   }
-  else if(license = "The Unlicense") {
+  else if(license == "The Unlicense") {
     licenseText =`This is free and unencumbered software released into the public domain.
     Anyone is free to copy, modify, publish, use, compile, sell, or
     distribute this software, either in source code form or as a compiled
@@ -54,9 +50,9 @@ function renderLicenseSection(license, user) {
     For more information, please refer to <http://unlicense.org/>`;
   }
   else {
-    licenseText=''
+    licenseText='';
   }
-  return licenceText;
+  return licenseText;
 }
 
 // TODO: Create a function to generate markdown for README
